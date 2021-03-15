@@ -1,14 +1,10 @@
 <template>
   <div>
-    <ul>
-      <li>
-        <router-link :to=" { name: 'Home' , params: { id: 2 } }"> Home ❘ About  
-        </router-link>
-      </li>
-      <li>
-       2
-      </li>
-    </ul>
+   <router-link :to=" { name: 'Home' , params: { id: 1 } }"> Home ❘ About
+  </router-link>
+  <div>
+    {{id}}
+  </div>
   </div>
 </template>
 
@@ -16,8 +12,11 @@
 ul {
   padding: 0px 30px 50px;
 }
-li {
-  list-style: none;
-}
 
 </style>
+
+<script>
+export default {
+  props: ["id"]
+};
+</script>
